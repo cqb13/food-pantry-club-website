@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import FaqCard from '@/components/FaqCard.vue'
+import ImageDisplay from '@/components/ImageDisplay.vue'
 //https://via.placeholder.com/350
 </script>
 
@@ -55,11 +56,9 @@ import FaqCard from '@/components/FaqCard.vue'
     </section>
 
     <section class="my-10">
-      <h2 class="text-3xl font-bold mb-5">Highlights</h2>
+      <h2 class="text-3xl font-bold mb-5 text-center">Highlights</h2>
       <div class="flex gap-5">
-        <img src="{{ placeholderImage }}" alt="Gallery Image 1" class="rounded-lg" />
-        <img src="{{ placeholderImage }}" alt="Gallery Image 2" class="rounded-lg" />
-        <img src="{{ placeholderImage }}" alt="Gallery Image 3" class="rounded-lg" />
+        <ImageDisplay image="/src/assets/group-pic.jpeg" alt="group" caption="Food drive planning"/>
       </div>
     </section>
 

@@ -15,7 +15,7 @@ const toggleAnswerVisibility = () => {
 
 <template>
   <section class="bg-secondary bg-opacity-50 rounded-2xl p-2">
-    <div class="flex items-center justify-between">
+    <div class="flex items-center justify-between gap-0.5">
       <h3 class="text-xl">{{ question }}</h3>
       <button @click="toggleAnswerVisibility">
         <svg
@@ -29,7 +29,7 @@ const toggleAnswerVisibility = () => {
           viewBox="0 0 100 100"
           enable-background="new 0 0 100 100"
           xml:space="preserve"
-          class="transform"
+          class="transform transition-all duration-150 ease-in-out"
           :class="{ 'rotate-45': !isAnswerVisible }"
         >
           <path

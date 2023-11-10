@@ -14,8 +14,8 @@ import { RouterLink, RouterView } from 'vue-router'
 
   <RouterView />
 
-  <footer class="px-32 flex justify-between">
-    <a class="text-center text-primary" target="_blank" href="https://github.com/cqb13/food-pantry-club-website/blob/main/LICENSE">Copyright © 2023 | MIT License</a>
-    <a href="https://github.com/cqb13" target="_blank">Created by: Maksim Straus</a>
+  <footer class="px-32 py-5 flex justify-between">
+    <a class="text-accent" target="_blank" href="https://github.com/cqb13/food-pantry-club-website/blob/main/LICENSE">Copyright © 2023 | MIT License</a>
+    <a href="https://github.com/cqb13" target="_blank" class="text-accent">Created by: Maksim Straus</a>
   </footer>
 </template>
