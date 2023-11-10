@@ -6,7 +6,6 @@ import { RouterLink, RouterView } from 'vue-router'
   <header class=" bg-primary p-32">
       <nav>
         <RouterLink to="/">Home</RouterLink>
-        <RouterLink to="/about">About</RouterLink>
       </nav>
       <section>
         <h1 class="text-background font-heading text-center text-5xl">SHS Food Pantry Club</h1>
