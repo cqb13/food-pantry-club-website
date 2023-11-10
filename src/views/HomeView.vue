@@ -1,10 +1,12 @@
-<script setup lang="ts"></script>
+<script setup lang="ts">
+//https://via.placeholder.com/350
+</script>
 
 <template>
   <main class="px-64 py-10">
     <section class="flex flex-col gap-5">
       <div class="flex gap-5">
-        <img src="https://via.placeholder.com/350" alt="logo" class="rounded-3xl rounded-tl-9xl"/>
+        <img src="/src/assets/logo.png" alt="logo" width="350px" height="350px" class="rounded-3xl rounded-tl-9xl"/>
         <article class="bg-secondary p-5 rounded-3xl rounded-tr-9xl">
           <h2>What is the SHS Food Pantry Club?</h2>
           <hr class="w-3/5">
@@ -29,7 +31,7 @@
             Stuff about the club here, but in better format (meetings times, etc.)
           </p>
         </article>
-        <img src="https://via.placeholder.com/350" alt="image" class="rounded-3xl rounded-br-9xl"/>
+        <img src="/src/assets/group-pic.jpeg" alt="group pic" width="400px" height="400px" class="rounded-3xl rounded-br-9xl"/>
       </div>
     </section>
     <section>
