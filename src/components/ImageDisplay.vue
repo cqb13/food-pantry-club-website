@@ -22,24 +22,23 @@ const closeModal = () => {
 
 <template>
   <section class="relative rounded-2xl overflow-hidden">
-    <div
-    class="w-full h-auto rounded-2xl cursor-pointer relative group"
-    @click="openModal"
-  >
-    <img
-      :src="image"
-      :alt="alt"
-      class="w-[400px] h-auto rounded-2xl transition-transform duration-300 transform group-hover:scale-105"
-    />
+    <div class="w-full h-auto rounded-2xl cursor-pointer relative group" @click="openModal">
+      <img
+        :src="image"
+        :alt="alt"
+        class="w-[400px] h-auto rounded-2xl transition-transform duration-300 transform group-hover:scale-105"
+      />
 
-    <div class="absolute inset-0 flex items-end p-2 text-white bg-black bg-opacity-75 transition-opacity duration-300 opacity-0 group-hover:opacity-100">
-      <p class="bg-secondary rounded px-2">{{ caption }}</p>
+      <div
+        class="absolute inset-0 flex items-end p-2 text-white bg-black bg-opacity-75 transition-opacity duration-300 opacity-0 group-hover:opacity-100"
+      >
+        <p class="bg-secondary rounded px-2">{{ caption }}</p>
+      </div>
     </div>
-  </div>
 
     <div
       v-if="isModalOpen"
-      class="fixed top-0 left-0 w-full h-full flex items-center justify-center bg-text bg-opacity-75"
+      class="fixed top-0 left-0 w-full h-full flex items-center justify-center bg-text bg-opacity-75 z-50"
     >
       <div class="absolute inset-0" @click="closeModal"></div>
       <button @click="closeModal">
