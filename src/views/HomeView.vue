@@ -58,7 +58,11 @@ import ImageDisplay from '@/components/ImageDisplay.vue'
     <section class="my-10">
       <h2 class="text-3xl font-bold mb-5 text-center">Highlights</h2>
       <div class="flex gap-5">
-        <ImageDisplay image="/src/assets/group-pic.jpeg" alt="group" caption="Food drive planning"/>
+        <ImageDisplay
+          image="https://foodpantry.shsdevs.com/images/group-pic.jpeg"
+          alt="group"
+          caption="Food drive planning"
+        />
       </div>
     </section>
 
