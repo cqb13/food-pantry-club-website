@@ -15,7 +15,9 @@ import { RouterView } from 'vue-router'
 
   <RouterView />
 
-  <footer class="px-32 py-20 flex justify-between bg-background-950 font-body">
+  <footer
+    class="px-32 py-20 flex justify-between items-center bg-background-950 font-body max-md:px-14 max-xsl:px-5 max-xs:flex-col"
+  >
     <a
       class="text-display-50"
       target="_blank"
