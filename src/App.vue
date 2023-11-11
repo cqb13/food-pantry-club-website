@@ -4,9 +4,6 @@ import { RouterLink, RouterView } from 'vue-router'
 
 <template>
   <header class=" bg-primary p-32">
-      <nav>
-        <RouterLink to="/">Home</RouterLink>
-      </nav>
       <section>
         <h1 class="text-background font-heading text-center text-5xl">SHS Food Pantry Club</h1>
       </section>

@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import FaqCard from '@/components/FaqCard.vue'
 import ImageDisplay from '@/components/ImageDisplay.vue'
-//https://via.placeholder.com/350
+import ContactForm from '@/components/ContactForm.vue';
 </script>
 
 <template>
@@ -17,7 +17,7 @@ import ImageDisplay from '@/components/ImageDisplay.vue'
         />
         <article class="bg-secondary p-5 rounded-3xl rounded-tr-9xl">
           <h2 class="text-2xl">What is the SHS Food Pantry Club?</h2>
-          <hr class="w-3/5" />
+          <hr class="w-3/5 bg-black border-0 rounded h-0.5" />
           <p class="text-xl">
             We are a passionate group of volunteers, focused on tackling food insecurity in the
             Greater Boston Area. Through food drives and hands-on volunteering, we aim to make a
@@ -31,7 +31,7 @@ import ImageDisplay from '@/components/ImageDisplay.vue'
       <div class="flex gap-5">
         <article class="bg-background-950 bg-opacity-5 p-5 flex-1 rounded-3xl rounded-bl-9xl">
           <h2 class="text-2xl">How to get Involved?</h2>
-          <hr class="w-3/5" />
+          <hr class="w-3/5 bg-black border-0 rounded h-0.5" />
           <div>
             <p>Attend our Monday meetings in Room 2304.</p>
             <ul class="list-disc pl-5">
@@ -100,19 +100,14 @@ import ImageDisplay from '@/components/ImageDisplay.vue'
     </section>
 
     <section class="my-10">
-      <h2 class="text-3xl font-bold mb-5">Contact Information</h2>
-      <p>Email: info@example.com</p>
-      <p>Phone: (123) 456-7890</p>
-    </section>
-
-    <section class="my-10">
-      <h2 class="text-3xl font-bold mb-5">Resources</h2>
-      <p>Explore resources related to food insecurity, volunteering, and community service:</p>
-      <ul class="list-disc pl-5">
-        <li><a href="#">Resource 1</a></li>
-        <li><a href="#">Resource 2</a></li>
-        <li><a href="#">Resource 3</a></li>
-      </ul>
+      <h2 class="text-3xl font-bold mb-5">Contact Us</h2>
+      <p class="text-lg">
+        Email:
+        <a href="mailto:eli2025@sharonschools.net" class="text-primary"
+          >eli2025@sharonschools.net</a
+        >
+      </p>
+      <ContactForm />
     </section>
   </main>
 </template>

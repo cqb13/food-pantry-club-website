@@ -30,7 +30,7 @@ const closeModal = () => {
       />
 
       <div
-        class="absolute inset-0 flex items-end p-2 text-white bg-black bg-opacity-75 transition-opacity duration-300 opacity-0 group-hover:opacity-100"
+        class="absolute inset-0 flex items-end p-2 text-primary bg-opacity-75 transition-opacity duration-300 opacity-0 group-hover:opacity-100"
       >
         <p class="bg-secondary rounded px-2">{{ caption }}</p>
       </div>
@@ -38,7 +38,7 @@ const closeModal = () => {
 
     <div
       v-if="isModalOpen"
-      class="fixed top-0 left-0 w-full h-full flex items-center justify-center bg-text bg-opacity-75 z-50"
+      class="fixed top-0 left-0 w-full h-full flex items-center justify-center bg-text bg-black bg-opacity-75 z-50"
     >
       <div class="absolute inset-0" @click="closeModal"></div>
       <button @click="closeModal">
@@ -65,7 +65,7 @@ const closeModal = () => {
           />
         </svg>
       </button>
-      <div class="z-10 max-w-3xl p-4 bg-white rounded-lg overflow-y-auto">
+      <div class="z-10 max-w-3xl p-4 rounded-lg overflow-y-auto">
         <img :src="image" :alt="alt" class="w-full h-auto rounded-lg" />
         <p v-if="caption" class="mt-5 p-5 bg-secondary rounded-2xl">{{ caption }}</p>
       </div>
