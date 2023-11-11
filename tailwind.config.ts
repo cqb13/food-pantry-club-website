@@ -1,5 +1,24 @@
-/** @type {import('tailwindcss').Config} */
-module.exports = {
+const plugin = require('tailwindcss/plugin')
+import type { Config } from 'tailwindcss'
+
+const textShadow = plugin(function ({
+  matchUtilities,
+  theme
+}: {
+  matchUtilities: any
+  theme: any
+}) {
+  matchUtilities(
+    {
+      'text-shadow': (value: string) => ({
+        textShadow: value
+      })
+    },
+    { values: theme('textShadow') }
+  )
+})
+
+const config: Config = {
   content: ['./index.html', './src/**/*.{vue,js,ts,jsx,tsx}'],
   theme: {
     extend: {
@@ -7,8 +26,19 @@ module.exports = {
         xs: '470px',
         xsl: '570px',
         mds: '670px',
+        sml: '900px',
         mdl: '970px',
         xml: '1170px'
+      },
+      backgroundImage: {
+        'hero-pattern': "url('/src/assets/hero.jpg')",
+        'hero-gradient':
+          'linear-gradient(180deg, rgba(0,0,0,0.4) 40%, rgb(255, 253, 250, 0.1) 100%)'
+      },
+      textShadow: {
+        sm: '0 1px 2px var(--tw-shadow-color)',
+        DEFAULT: '0 2px 4px var(--tw-shadow-color)',
+        lg: '0 8px 16px var(--tw-shadow-color)'
       },
       colors: {
         display: {
@@ -80,8 +110,8 @@ module.exports = {
           900: '#1e1515',
           950: '#0f0a0a',
           DEFAULT: '#986767'
-        },
-      },
+        }
+      }
     },
     fontSize: {
       sm: '0.750rem',
@@ -91,14 +121,20 @@ module.exports = {
       '3xl': '2.369rem',
       '4xl': '3.158rem',
       '5xl': '4.210rem',
+      '6xl': '5.614rem',
+      '7xl': '7.485rem',
+      '8xl': '9.980rem',
+      '9xl': '13.307rem'
     },
     fontFamily: {
-      heading: 'Didact Gothic',
-      body: 'Didact Gothic',
+      heading: 'League Spartan',
+      body: 'Quicksand'
     },
     fontWeight: {
       normal: '400',
-      bold: '700',
+      medium: '500',
+      semibold: '600',
+      bold: '700'
     },
     borderRadius: {
       DEFAULT: '0.25rem',
@@ -113,8 +149,10 @@ module.exports = {
       '6xl': '3rem',
       '7xl': '3.5rem',
       '8xl': '4rem',
-      '9xl': '4.5rem',
-    },
+      '9xl': '4.5rem'
+    }
   },
-  plugins: []
+  plugins: [textShadow]
 }
+
+export default config

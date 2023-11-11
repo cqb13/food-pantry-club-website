@@ -1,18 +1,29 @@
 <script setup lang="ts">
-import { RouterLink, RouterView } from 'vue-router'
+import { RouterView } from 'vue-router'
 </script>
 
 <template>
-  <header class=" bg-primary p-32">
-      <section>
-        <h1 class="text-background font-heading text-center text-5xl">SHS Food Pantry Club</h1>
-      </section>
+  <header class="bg-hero-pattern h-[80vh] bg-cover bg-center bg-no-repeat w-screen">
+    <div class="w-screen h-full bg-hero-gradient flex items-center justify-center">
+      <h1
+        class="text-background font-heading text-center text-5xl mb-44 font-bold text-shadow-sm shadow-display px-5"
+      >
+        SHS Food Pantry Club
+      </h1>
+    </div>
   </header>
 
   <RouterView />
 
-  <footer class="px-32 py-5 flex justify-between">
-    <a class="text-accent" target="_blank" href="https://github.com/cqb13/food-pantry-club-website/blob/main/LICENSE">Copyright © 2023 | MIT License</a>
-    <a href="https://github.com/cqb13" target="_blank" class="text-accent">Created by: Maksim Straus</a>
+  <footer class="px-32 py-20 flex justify-between bg-background-950 font-body">
+    <a
+      class="text-display-50"
+      target="_blank"
+      href="https://github.com/cqb13/food-pantry-club-website/blob/main/LICENSE"
+      >Copyright © 2023 | MIT License</a
+    >
+    <a href="https://github.com/cqb13" target="_blank" class="text-display-50"
+      >Created by: Maksim Straus</a
+    >
   </footer>
 </template>

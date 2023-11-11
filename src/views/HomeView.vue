@@ -1,24 +1,24 @@
 <script setup lang="ts">
 import FaqCard from '@/components/FaqCard.vue'
 import ImageDisplay from '@/components/ImageDisplay.vue'
-import ContactForm from '@/components/ContactForm.vue';
+import ContactForm from '@/components/ContactForm.vue'
 </script>
 
 <template>
-  <main class="px-64 py-10">
+  <main class="px-64 py-10 max-xl:px-52 max-xml:px-32 max-md:px-14 max-xs:px-5">
     <section class="flex flex-col gap-5">
-      <div class="flex gap-5">
+      <div class="flex gap-5 items-center justify-center max-lg:flex-col max-lg:gap-2">
         <img
           src="/src/assets/logo.png"
           alt="logo"
-          width="350px"
-          height="350px"
-          class="rounded-3xl rounded-tl-9xl"
+          class="rounded-3xl rounded-tl-9xl w-96 h-96 max-w-full mx-auto max-lg:w-76 max-lg:h-76 max-xs:w-56 max-xs:h-56 max-md:w-64 max-md:h-64"
         />
-        <article class="bg-secondary p-5 rounded-3xl rounded-tr-9xl">
-          <h2 class="text-2xl">What is the SHS Food Pantry Club?</h2>
+        <article
+          class="bg-secondary-300 p-5 rounded-3xl rounded-tr-9xl flex-1 max-lg:rounded-tl-5xl max-lg:rounded-tr-5xl"
+        >
+          <h2 class="text-2xl font-heading font-semibold">What is the SHS Food Pantry Club?</h2>
           <hr class="w-3/5 bg-black border-0 rounded h-0.5" />
-          <p class="text-xl">
+          <p class="text-xl font-body font-medium">
             We are a passionate group of volunteers, focused on tackling food insecurity in the
             Greater Boston Area. Through food drives and hands-on volunteering, we aim to make a
             positive impact on local pantries and the lives of those in need. We're looking for
@@ -29,16 +29,18 @@ import ContactForm from '@/components/ContactForm.vue';
         </article>
       </div>
       <div class="flex gap-5">
-        <article class="bg-background-950 bg-opacity-5 p-5 flex-1 rounded-3xl rounded-bl-9xl">
-          <h2 class="text-2xl">How to get Involved?</h2>
+        <article
+          class="bg-background-950 bg-opacity-5 p-5 flex-1 rounded-3xl rounded-bl-9xl max-lg:rounded-br-5xl max-lg:rounded-bl-5xl"
+        >
+          <h2 class="text-2xl font-heading font-semibold">How to get Involved?</h2>
           <hr class="w-3/5 bg-black border-0 rounded h-0.5" />
-          <div>
+          <div class="font-body font-medium text-xl">
             <p>Attend our Monday meetings in Room 2304.</p>
             <ul class="list-disc pl-5">
               <li>2:45 - 3:15 PM</li>
             </ul>
           </div>
-          <div>
+          <div class="font-body font-medium text-xl">
             <p>Join our Schoology group using the provided code.</p>
             <ul class="list-disc pl-5">
               <li>Code: 2DN8-6T6X-NCJSB</li>
@@ -50,13 +52,13 @@ import ContactForm from '@/components/ContactForm.vue';
           alt="group pic"
           width="400px"
           height="400px"
-          class="rounded-3xl rounded-br-9xl"
+          class="rounded-3xl rounded-br-9xl max-lg:hidden"
         />
       </div>
     </section>
 
     <section class="my-10">
-      <h2 class="text-3xl font-bold mb-5 text-center">Highlights</h2>
+      <h2 class="text-4xl font-heading font-bold mb-2 text-center">Highlights</h2>
       <div class="flex gap-5">
         <ImageDisplay
           image="https://foodpantry.shsdevs.com/images/group-pic.jpeg"
@@ -66,10 +68,10 @@ import ContactForm from '@/components/ContactForm.vue';
       </div>
     </section>
 
-    <section class="my-10 flex">
-      <div class="w-full">
-        <h2 class="text-3xl font-bold mb-5">FAQ</h2>
-        <p>Answers to some questions you might have.</p>
+    <section class="my-10 flex gap-10 max-mdl:flex-col max-mdl:gap-2">
+      <div class="w-6/12 max-mdl:w-full">
+        <h2 class="text-4xl font-heading font-bold mb-2">FAQ</h2>
+        <p class="font-body font-semibold text-lg">Answers to some questions you might have.</p>
       </div>
       <div class="flex flex-col gap-5 w-full">
         <FaqCard
@@ -100,10 +102,10 @@ import ContactForm from '@/components/ContactForm.vue';
     </section>
 
     <section class="my-10">
-      <h2 class="text-3xl font-bold mb-5">Contact Us</h2>
-      <p class="text-lg">
+      <h2 class="text-4xl font-heading font-bold mb-2">Contact Us</h2>
+      <p class="font-body font-semibold text-lg">
         Email:
-        <a href="mailto:eli2025@sharonschools.net" class="text-primary"
+        <a href="mailto:eli2025@sharonschools.net" class="hover:underline"
           >eli2025@sharonschools.net</a
         >
       </p>

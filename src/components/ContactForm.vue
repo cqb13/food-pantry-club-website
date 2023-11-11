@@ -24,7 +24,7 @@ const handleSubmit = () => {
     message: message.value
   })
 
-    showSuccessMessage('Form submitted successfully!')
+  showSuccessMessage('Form submitted successfully!')
 
   firstName.value = ''
   lastName.value = ''
@@ -50,25 +50,36 @@ const showSuccessMessage = (message: string) => {
 <template>
   <section class="my-5">
     <form @submit.prevent="handleSubmit" class="flex flex-col gap-4">
-      <div class="flex gap-4">
+      <div class="flex gap-4 max-md:flex-col">
         <input
           v-model="firstName"
           type="text"
           placeholder="First Name"
-          class="border p-2 rounded-md flex-1"
+          class="border p-2 rounded-md flex-1 bg-background-950 bg-opacity-5 font-body font-semibold text-lg"
         />
         <input
           v-model="lastName"
           type="text"
           placeholder="Last Name"
-          class="border p-2 rounded-md flex-1"
+          class="border p-2 rounded-md flex-1 bg-background-950 bg-opacity-5 font-body font-semibold text-lg"
         />
       </div>
-      <input v-model="email" type="email" placeholder="Email" class="border p-2 rounded-md" />
-      <textarea v-model="message" placeholder="Message" cols="30" rows="10" class="border p-2 rounded-md"></textarea>
+      <input
+        v-model="email"
+        type="email"
+        placeholder="Email"
+        class="border p-2 rounded-md bg-background-950 bg-opacity-5 font-body font-semibold text-lg"
+      />
+      <textarea
+        v-model="message"
+        placeholder="Message"
+        cols="30"
+        rows="10"
+        class="border p-2 rounded-md bg-background-950 bg-opacity-5 font-body font-semibold text-lg"
+      ></textarea>
       <button
         type="submit"
-        class="bg-primary text-background py-2 px-4 rounded-md hover:bg-secondary-700 transition-all duration-300 ease-in-out"
+        class="bg-primary text-background py-2 px-4 rounded-md hover:bg-secondary-700 transition-all duration-300 ease-in-out font-body font-semibold text-lg"
       >
         Submit
       </button>

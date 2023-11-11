@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { ref, computed } from 'vue'
+import { ref } from 'vue'
 
 defineProps<{
   image: string
@@ -30,9 +30,9 @@ const closeModal = () => {
       />
 
       <div
-        class="absolute inset-0 flex items-end p-2 text-primary bg-opacity-75 transition-opacity duration-300 opacity-0 group-hover:opacity-100"
+        class="absolute inset-0 flex items-end p-2 text-display bg-opacity-75 transition-opacity duration-300 opacity-0 group-hover:opacity-100"
       >
-        <p class="bg-secondary rounded px-2">{{ caption }}</p>
+        <p class="bg-secondary rounded px-2 font-body">{{ caption }}</p>
       </div>
     </div>
 
@@ -67,7 +67,9 @@ const closeModal = () => {
       </button>
       <div class="z-10 max-w-3xl p-4 rounded-lg overflow-y-auto">
         <img :src="image" :alt="alt" class="w-full h-auto rounded-lg" />
-        <p v-if="caption" class="mt-5 p-5 bg-secondary rounded-2xl">{{ caption }}</p>
+        <p v-if="caption" class="mt-5 p-5 bg-secondary rounded-2xl font-body font-semibold text-lg">
+          {{ caption }}
+        </p>
       </div>
     </div>
   </section>

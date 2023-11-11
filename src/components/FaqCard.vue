@@ -14,9 +14,9 @@ const toggleAnswerVisibility = () => {
 </script>
 
 <template>
-  <section class="bg-secondary bg-opacity-50 rounded-2xl p-2">
+  <section class="bg-secondary-300 rounded-2xl p-2 flex flex-col justify-center">
     <div class="flex items-center justify-between gap-0.5">
-      <h3 class="text-xl">{{ question }}</h3>
+      <h3 class="text-xl font-heading font-medium">{{ question }}</h3>
       <button @click="toggleAnswerVisibility">
         <svg
           fill="#986767"
@@ -44,7 +44,7 @@ const toggleAnswerVisibility = () => {
       </button>
     </div>
     <div v-if="isAnswerVisible">
-      <p>{{ answer }}</p>
+      <p class="font-body font-semibold text-lg">{{ answer }}</p>
     </div>
   </section>
 </template>
