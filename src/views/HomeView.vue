@@ -80,7 +80,7 @@ import ContactForm from '@/components/ContactForm.vue'
         />
         <FaqCard
           question="What volunteer opportunities are available?"
-          answer="We offer various volunteering opportunities, including..."
+          answer="We offer various volunteering opportunities, including food drives, food pantry volunteering, and fundraising. We also provide leadership opportunities for those interested in taking on a more active role in the club."
         />
         <FaqCard
           question="Will I earn volunteer hours?"
