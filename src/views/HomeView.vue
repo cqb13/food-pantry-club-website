@@ -1,7 +1,33 @@
 <script setup lang="ts">
+import { ref } from 'vue'
 import FaqCard from '@/components/FaqCard.vue'
 import ImageDisplay from '@/components/ImageDisplay.vue'
 import ContactForm from '@/components/ContactForm.vue'
+import NotificationPopup from '@/components/NotificationPopup.vue'
+
+const opened = ref(false)
+const notificationTitle = ref('')
+const notificationMessage = ref('')
+const notificationType = ref<'success' | 'error'>('success')
+
+const handleFormError = (errorMessage: string) => {
+  openNotification('Error', errorMessage, 'error')
+}
+
+const handleFormSuccess = (successMessage: string) => {
+  openNotification('Success', successMessage, 'success')
+}
+
+const openNotification = (title: string, message: string, type: 'success' | 'error') => {
+  notificationTitle.value = title
+  notificationMessage.value = message
+  opened.value = true
+  notificationType.value = type
+
+  setTimeout(() => {
+    opened.value = false
+  }, 5000)
+}
 </script>
 
 <template>
@@ -109,7 +135,14 @@ import ContactForm from '@/components/ContactForm.vue'
           >eli2025@sharonschools.net</a
         >
       </p>
-      <ContactForm />
+      <ContactForm @error="handleFormError" @success="handleFormSuccess" />
     </section>
+    <NotificationPopup
+      :opened="opened"
+      :title="notificationTitle"
+      :message="notificationMessage"
+      :notificationType="notificationType"
+      @close="opened = false"
+    />
   </main>
 </template>

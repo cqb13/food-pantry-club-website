@@ -1,19 +1,16 @@
 <script setup lang="ts">
-import { ref } from 'vue'
+import { ref, defineEmits } from 'vue'
+
+const emit = defineEmits(['error', 'success'])
 
 const firstName = ref('')
 const lastName = ref('')
 const email = ref('')
 const message = ref('')
 
-const errorMessage = ref('')
-const successMessage = ref('')
-
 const handleSubmit = () => {
-  errorMessage.value = ''
-
   if (!firstName.value || !lastName.value || !email.value || !message.value) {
-    showErrorMessage('Please fill out all fields.')
+    emit('error', 'Please fill out all fields.')
     return
   }
 
@@ -24,26 +21,12 @@ const handleSubmit = () => {
     message: message.value
   })
 
-  showSuccessMessage('Form submitted successfully!')
+  emit('success', 'Form submitted successfully!')
 
   firstName.value = ''
   lastName.value = ''
   email.value = ''
   message.value = ''
-}
-
-const showErrorMessage = (message: string) => {
-  errorMessage.value = message
-  setTimeout(() => {
-    errorMessage.value = ''
-  }, 5000)
-}
-
-const showSuccessMessage = (message: string) => {
-  successMessage.value = message
-  setTimeout(() => {
-    successMessage.value = ''
-  }, 5000)
 }
 </script>
 
@@ -84,7 +67,5 @@ const showSuccessMessage = (message: string) => {
         Submit
       </button>
     </form>
-    <p class="text-red-500 text-center">{{ errorMessage }}</p>
-    <p class="text-green-500 text-center">{{ successMessage }}</p>
   </section>
 </template>
