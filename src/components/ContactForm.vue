@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import { ref, defineEmits } from 'vue'
+import emailjs from 'emailjs-com'
 
 const emit = defineEmits(['error', 'success'])
 
@@ -8,18 +9,32 @@ const lastName = ref('')
 const email = ref('')
 const message = ref('')
 
-const handleSubmit = () => {
+const serviceId = import.meta.env.VITE_EMAIL_SERVICE_ID
+const templateId = import.meta.env.VITE_EMAIL_TEMPLATE_ID
+const userId = import.meta.env.VITE_EMAIL_USER_ID
+
+const handleSubmit = async () => {
   if (!firstName.value || !lastName.value || !email.value || !message.value) {
     emit('error', 'Please fill out all fields.')
     return
   }
 
-  console.log('Form submitted:', {
-    firstName: firstName.value,
-    lastName: lastName.value,
-    email: email.value,
-    message: message.value
-  })
+  if (!serviceId || !templateId || !userId) {
+    emit('error', 'Missing email configuration.')
+    return
+  }
+
+  await emailjs.send(
+    serviceId,
+    templateId,
+    {
+      subject: 'Contact Form Submission',
+      from_name: `${firstName.value} ${lastName.value}`,
+      from_email: email.value,
+      message: message.value
+    },
+    userId
+  )
 
   emit('success', 'Form submitted successfully!')
 
