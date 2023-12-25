@@ -9,9 +9,9 @@ const lastName = ref('')
 const email = ref('')
 const message = ref('')
 
-const serviceId = import.meta.env.VITE_EMAIL_SERVICE_ID
-const templateId = import.meta.env.VITE_EMAIL_TEMPLATE_ID
-const userId = import.meta.env.VITE_EMAIL_USER_ID
+const serviceId = import.meta.env.VITE_VERCEL_ENV_EMAIL_SERVICE_ID
+const templateId = import.meta.env.VITE_VERCEL_ENV_EMAIL_TEMPLATE_ID
+const userId = import.meta.env.VITE_VERCEL_ENV_EMAIL_USER_ID
 
 const handleSubmit = async () => {
   if (!firstName.value || !lastName.value || !email.value || !message.value) {
